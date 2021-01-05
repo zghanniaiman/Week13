@@ -1,0 +1,127 @@
+Commands for mv
+
+mv syntax
+
+mv <file name> <the path that you want to save it to>
+
+
+Commands for navigating a file directory:
+
+pwd: Displays the current working directory.
+
+ls: Lists the directories and files in the current directory.
+
+cd: Navigates into a directory.
+
+cd ..: Navigates out of a directory.
+
+clear: Clears out the terminal history on the page.
+
+
+Commands for making and removing files and directories:
+
+mkdir: Creates a new directory.
+
+rmdir: Removes a directory.
+
+touch: Creates an empty file.
+
+rm: Removes a file.
+
+
+Commands for moving and copying files:
+
+cp: Copies files.
+
+mv: Moves files.
+
+
+Commands for previewing files:
+
+more: Shows a file one page at a time; space bar is used to move from page to page.
+
+less: Similar to more, but allows scrolling up and down pages.
+
+head: Previews the top 10 lines of a file.
+
+tail: Previews the bottom 10 lines of a file.
+
+
+Commands for concatenating and redirecting:
+
+cat: Concatenates and combines multiple files together.
+
+>: Writes to a file, and overwrites file if the file name already exists.
+
+>>: Writes to a file, and appends to the file if the file name already exists.
+
+Display instructions for the find command
+$ man find
+
+Find all the files and directories in the current tree
+$ find
+
+List files in a specific directory
+$ find ./demo
+
+Find a file by name (case sensitive) in the current directory
+$ find  . -name index.html
+
+Find a file by name (not case sensitive)
+$ find  . -iname index.html
+
+Find all files in a directory
+$ find  -type f
+
+Find all directories
+$ find  -type d 
+
+Find all the .txt files
+$ find -type f -name '*.txt'
+
+Find directories that begin with Memo
+$ find -type d -name 'Memo*'
+
+Find files that are over 5MB in size
+$ find ~/joe -size +5M
+
+Find files before or after a creation time
+$ find ~/joe -size +5M
+
+Find files before or after a creation time
+$ find . -cmin +2
+
+Find all html files and copy them to the directory /zoe
+$ find . -name '*.html' -exec cp '{}' ~/zoe/ \;
+
+
+grep Command
+
+Display instructions for the grep command
+$ man grep
+
+grep (search) for the word "http" in the file index.html
+$ grep http index.html
+
+grep (search) for the word "http" in the files file1.html file2.html file3.html
+$ grep http file1.html file2.html file3.html
+
+grep (search) recursively for the word "http" in all files in a directory tree
+$ grep -r http 
+
+grep (search) for the word 'bot' from the output of the "ip addr show" command
+$ ip addr show | grep bot
+
+grep (search) for the word 'Bot' ignoring case
+$ grep -i Bot
+
+wc Command
+
+Display instructions for the wc command
+$ man wc
+
+Display the number of lines, words and characters in the index.html file
+$ wc index.html
+
+Display the count for all of the text files within a directory
+$ wc . *
