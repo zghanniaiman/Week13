@@ -89,14 +89,14 @@ Filebeat collects the changes that were done and metricbeats collects metrics an
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the YAML file to /etc/ansible.
+- Update the /etc/ansible/host file to include the hosts group, private IP address and the following line ansible_python_interpreter=/usr/bin/python3.
+- Run the playbook, and navigate to curl localhost/setup.php to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_ 
 - _Which file is the playbook? Where do you copy it?_ /etc/ansible/file/filebeat-configuration.yml
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-edit the host file in /etc/ansible/ to add t he web/elk server ip address
+edit the host file in /etc/ansible/ to add the web/elk server ip address
 - _Which URL do you navigate to in order to check that the ELK server is running? www.publicip:5601
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
