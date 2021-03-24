@@ -45,14 +45,14 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | No                  | 184.144.39.92        |
-| Web-1    | Yes                 | 10.0.1.4             |
-| Web-2    | Yes                 | 10.0.1.4             |
+| Web-1    | Yes                 | 10.0.1.4, LB IP      |
+| Web-2    | Yes                 | 10.0.1.4, LB IP      |
 | ELK      | No                  | 10.0.1.4             |
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_ Input commands into multiple servers from a single playbook
+-
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
@@ -64,14 +64,16 @@ Launch docker container: elk
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
- https://github.com/zghanniaiman/Week13/blob/main/Diagrams/sudodockerps.PNG 
+![alt text](https://github.com/zghanniaiman/Week13/blob/main/Diagrams/sudodockerps.PNG)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_ 10.0.1.5 and 10.0.1.6
+-10.0.1.5
+-10.0.1.6
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_ Filebeat and MEtricbeat
+-Filebeat
+-MEtricbeat
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
