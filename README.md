@@ -85,11 +85,7 @@ SSH into the control node and follow the steps below:
 - Copy the YAML file to /etc/ansible.
 - Update the /etc/ansible/host file to include the hosts group, private IP address and the following line ansible_python_interpreter=/usr/bin/python3.
 - Run the playbook, and navigate to curl localhost/setup.php to check that the installation worked as expected.
+- File is filebeat-configuration.yml and copied to /etc/ansible/file/
+- Edit the host file in /etc/ansible/ to add the web/elk server ip address
+- Access through www.publicip:5601
 
-- _Which file is the playbook? Where do you copy it?_ /etc/ansible/file/filebeat-configuration.yml
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-edit the host file in /etc/ansible/ to add the web/elk server ip address
-- _Which URL do you navigate to in order to check that the ELK server is running? www.publicip:5601
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
-ansible-playbook filebeat-playbook.yml
