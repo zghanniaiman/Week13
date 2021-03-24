@@ -82,10 +82,10 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the YAML file to /etc/ansible.
-- Update the /etc/ansible/host file to include the hosts group, private IP address and the following line ansible_python_interpreter=/usr/bin/python3.
-- Run the playbook, and navigate to curl localhost/setup.php to check that the installation worked as expected.
-- File is filebeat-configuration.yml and copied to /etc/ansible/file/
-- Edit the host file in /etc/ansible/ to add the web/elk server ip address
+- Copy the filebeat-configuration.yml file to /etc/ansible/file/.
+- Update the config file to include the hosts group, private IP address and the following line ansible_python_interpreter=/usr/bin/python3.
+- Run the playbook, and navigate to ELK to check that the installation worked as expected.
+- Filebeat-playbook.yml, metricbeat-playbook.yml are copied to /etc/ansible/
+- Edit the host file in /etc/ansible/host.cfg to add the web/elk server ip address
 - Access through www.publicip:5601
 
