@@ -15,15 +15,13 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_ Load blanacers protect against DDoS attacks and jump box gives you access to your network from a single node that is secured and monitored.
+Load balancing ensures that the application will be highly available, in addition to restricting access to the network. Load blanacers protect against DDoS attacks. The jump box gives you access to your network from a single node that is secured and monitored.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
-- _TODO: What does Filebeat watch for?_ info in the file system which has been changed
-- _TODO: What does Metricbeat record?_ it collects metrics and statistics and outputs them to what you specify
+Filebeat is an agent installed on your severs, it gives you info in the file system which has been changed
+Metricberat collects metrics and statistics and outputs them to what you specify, such as Elasticsearch or Logstash.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -36,20 +34,20 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_ Home public IP
+Only the Jump-Box-Provisioning machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- My Home public IP (184.144.39.92) can access this machine
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_ Jump Box, 10.0.1.4
+Machines within the network can only be accessed by SSH.
+- The Jump-Box-Provisioning machine (10.0.1.4) can access the ELK VM
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | 184.144.39.92        |
+| Jump Box | No                  | 184.144.39.92        |
 | Web-1    | Yes                 | 10.0.1.4             |
 | Web-2    | Yes                 | 10.0.1.4             |
-| ELK      | Yes                 | 10.0.1.4             |
+| ELK      | No                  | 10.0.1.4             |
 
 ### Elk Configuration
 
